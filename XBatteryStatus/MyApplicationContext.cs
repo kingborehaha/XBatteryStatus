@@ -408,7 +408,10 @@ namespace XBatteryStatus
 
                         if ((lastBattery > 15 && val <= 15) || (lastBattery > 10 && val <= 10) || (lastBattery > 5 && val <= 5))
                         {
-                            new ToastContentBuilder().AddText("Low Battery").AddText(notify)
+                            new ToastContentBuilder()
+                                .AddText("Low Battery")
+                                .AddText(notify)
+                                .AddAudio(new Uri("ms-winsoundevent:Notification.Default"), false, true)
                                 .Show();
                         }
                         lastBattery = val;
