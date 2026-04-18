@@ -628,9 +628,9 @@ namespace XBatteryStatus
                         {
                             if (val >= 100) val = 99;
 
-                                AddDigit(icon, DigitToBitmap(val / 10), false);
-                                AddDigit(icon, DigitToBitmap(val % 10), true);
-                            }
+                            AddDigit(icon, DigitToBitmap(val / 10), false);
+                            AddDigit(icon, DigitToBitmap(val % 10), true);
+                        }
                         else
                         {
                             AddPercentage(icon, val);
